@@ -58,8 +58,6 @@
 			<version>1.0.1.Final</version>
 		</dependency>
 
-
-
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -67,20 +65,29 @@
 			<version>5.2.12.Final</version>
 		</dependency>
 
-
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>6.0.6</version>
+			<version>5.1.44</version>
 		</dependency>
-
-
 
 
 	</dependencies>
 	<build>
 		<finalName>residence</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7‐maven‐plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+					<path>/residence</path>
+					<port>8080</port>
+				</configuration>
+			</plugin>
+		</plugins>
+
 	</build>
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
